@@ -324,9 +324,9 @@ if (!document.querySelector('.event-search').classList.contains('active') && !vi
         eventSearch.getCountries.bind(eventSearch)(); visited = true
     })
 }
-// eventSearch.yearSelect.addEventListener('change', eventSearch.getEvents.bind(eventSearch))
-// eventSearch.countrySelect.addEventListener('change', eventSearch.getEvents.bind(eventSearch))
-// eventSearch.sortButton.addEventListener('click', eventSearch.reverseDates.bind(eventSearch))
+eventSearch.yearSelect.addEventListener('change', eventSearch.getEvents.bind(eventSearch))
+eventSearch.countrySelect.addEventListener('change', eventSearch.getEvents.bind(eventSearch))
+eventSearch.sortButton.addEventListener('click', eventSearch.reverseDates.bind(eventSearch))
 
 
 
