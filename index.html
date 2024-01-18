@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Часові інтервали та пошук свят</title>
+</head>
+
+<body>
+    <div class="app">
+        <section class="date-diff active">
+            <h1 class="section__title">Калькулятор часу</h1>
+            <div class="section__wrapper">
+                <div class="datepicker">
+                    <div class="datepicker__input">
+                        <input type="date">
+                    </div>
+                    <div class="separator"></div>
+                    <div class="datepicker__text">
+                        Оберіть потрібні дати<br /> або вкажіть одну з дат<br /> та скористайтеся пресетом
+                    </div>
+                    <div class="separator"></div>
+                    <div class="datepicker">
+                        <div class="datepicker__input">
+                            <input type="date">
+                        </div>
+                    </div>
+                </div>
+                <div class="parameters">
+                    <div class="preset parameter">
+                        <span class="parameters__name">Пресет</span>
+                        <div class="button-group">
+                            <button class="preset__week preset__button">Тиждень</button>
+                            <button class="preset__month preset__button">Місяць</button>
+                        </div>
+                    </div>
+                    <div class="day-filter parameter">
+                        <span class="parameters__name">Фільтр днів</span>
+                        <div class="radio-group input-group">
+                            <input class="radio-group__input" name="days" id="all_days" type="radio" checked>
+                            <label class="radio-group__label" for="all_days">Всі дні</label>
+                            <span class="separator"></span>
+                            <input class="radio-group__input" name="days" id="work_days" type="radio">
+                            <label class="radio-group__label" for="work_days">Робочі дні</label>
+                            <span class="separator"></span>
+                            <input class="radio-group__input" name="days" id="day_offs" type="radio">
+                            <label class="radio-group__label" for="day_offs">Вихідні дні</label>
+                        </div>
+                    </div>
+                    <div class="count-button__wrapper">
+                        <div class="count-button input-group">
+                            <button data-format="days">Порахувати кількість днів</button>
+                            <span class="separator"></span>
+                            <span class="count-button__dropdown-icon">
+                                <svg width="9" height="8" viewBox="0 0 9 8" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.348 6.6432C4.95633 7.26987 4.04367 7.26987 3.652 6.6432L0.456249 1.53C0.0399689 0.86395 0.518812 8.2277e-08 1.30425 1.45707e-07L7.69575 6.6187e-07C8.48119 7.253e-07 8.96003 0.863952 8.54375 1.53L5.348 6.6432Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <ul class="count-button__dropdown-list">
+                            <li>...</li>
+                            <li data-format="days">Порахувати кількість днів</li>
+                            <li data-format="hours">Порахувати кількість годин</li>
+                            <li data-format="minutes">Порахувати кількість хвилин</li>
+                            <li data-format="seconds">Порахувати кількість секунд</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="history">
+                    <div class="separator"></div>
+                    <h2 class="section__subtitle">
+                        Попередні результати
+                    </h2>
+                    <div class="history__table table">
+                        <div class="row header-row">
+                            <div>Стартова дата</div>
+                            <div>Кінцева дата</div>
+                            <div>Результат виміру</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="event-search">
+            <h1 class="section__title">Свята та події</h1>
+            <div class="section__wrapper">
+                <div class="parameters">
+                    <div class="country parameter">
+                        <span class="parameters__name">Вибір країни</span>
+                        <div class="input-group">
+                            <select class="select__country preset__select">
+                                <option value="">Оберіть країну</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="day-filter parameter">
+                        <span class="parameters__name">Рік</span>
+                        <div class="input-group">
+                            <select class="select__year" disabled></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="event__table table">
+                    <div class="row header-row">
+                        <div>Дата
+                            <button class="sort-order">
+                                <svg width="11" height="20" viewBox="0 0 11 20" 
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.652 1.3568C5.04367 0.730127 5.95633 0.730128 6.348 1.3568L9.54375 6.47C9.96003 7.13605 9.48119 8 8.69575 8L2.30425 8C1.51881 8 1.03997 7.13605 1.45625 6.47L4.652 1.3568Z"
+                                         />
+                                    <path
+                                        d="M6.348 18.6432C5.95633 19.2699 5.04367 19.2699 4.652 18.6432L1.45625 13.53C1.03997 12.864 1.51881 12 2.30425 12L8.69575 12C9.48119 12 9.96003 12.864 9.54375 13.53L6.348 18.6432Z"
+                                         />
+                                </svg>
+                            </button>
+                        </div>
+                        <div>Назва свята</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

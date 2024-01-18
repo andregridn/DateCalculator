@@ -1,0 +1,30 @@
+.event-search .row {
+    grid-template-columns: minmax(100px, 1fr) repeat(5, 1fr);;
+}
+
+.event-search .header-row > div {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.event-search .row > div {
+    text-align: start;
+}
+
+.event-search .row > div:first-child {
+    grid-column: 1/2;
+}
+.event-search .row > div:last-child {
+    grid-column: 2/-1;
+}
+.sort-order{
+    padding: 0;
+    border: none;
+}
+.sort-order:hover{
+    background: none;
+}
+.sort-order:active{
+    background: none;
+}
